@@ -14,4 +14,8 @@ export class CoffeeService {
   getAllCoffees(): Observable<any>{
     return this.http.get<any>(this.API_URL);
   }
+
+  postCoffee(body: any): Observable<any> {
+    return this.http.post<any>(this.API_URL, body);
+  }
 }
