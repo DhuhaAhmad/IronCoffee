@@ -12,7 +12,7 @@ export class CoffeesComponent implements OnInit {
 
   coffees: Coffee[] = [];
   p: number = 1; // Current page
-  itemsPerPage: number = 10; // Items per page
+  itemsPerPage: number = 3; // Items per page
 
   constructor(private coffeeService: CoffeeService){}
 

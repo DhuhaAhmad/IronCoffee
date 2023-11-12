@@ -1,6 +1,6 @@
 <app-menu></app-menu>
 <!-- <p>coffees works!</p> -->
-<div class="container" *ngFor="let coffee of coffees | paginate: { itemsPerPage: 3, currentPage: p}">
+<div class="container" *ngFor="let coffee of coffees | paginate: { itemsPerPage: itemsPerPage, currentPage: p}">
     <a [routerLink]="['/single-coffee']" class="card-link">
     <div class="card custom-card">
         <img [src]="coffee.image_url" class="card-img-top">
