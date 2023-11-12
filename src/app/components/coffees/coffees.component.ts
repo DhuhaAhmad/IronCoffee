@@ -11,6 +11,8 @@ import { CoffeeService } from 'src/app/services/coffee.service';
 export class CoffeesComponent implements OnInit {
 
   coffees: Coffee[] = [];
+  p: number = 1; // Current page
+  itemsPerPage: number = 10; // Items per page
 
   constructor(private coffeeService: CoffeeService){}
 
@@ -30,4 +32,6 @@ export class CoffeesComponent implements OnInit {
       }
     });
   }
+
+  onPageChange(pageNumber: number): void {this.p = pageNumber; }
 }
