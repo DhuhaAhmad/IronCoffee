@@ -15,6 +15,10 @@ export class CoffeeService {
     return this.http.get<any>(this.API_URL);
   }
 
+  fetchRandomCoffee():Observable<any>{
+    return this.http.get<any>(`${this.API_URL}/random`)
+  }
+
   postCoffee(body: any): Observable<any> {
     return this.http.post<any>(this.API_URL, body);
   }

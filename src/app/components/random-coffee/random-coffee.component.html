@@ -1,3 +1,11 @@
 <app-menu></app-menu>
-
-<p>random-coffee works!</p>
+<div class="coffee-info">
+    <img *ngIf="coffee?.image_url" src="{{ coffee?.image_url }}" alt="{{ coffee?.name }} Image" />
+    <h2 *ngIf="coffee?.name">{{ coffee?.name }}</h2>
+    <p *ngIf="coffee?.tagline">{{ coffee?.tagline }}</p>
+    <p *ngIf="coffee?.first_roasted">First Roasted: {{ coffee?.first_roasted }}</p>
+    <p *ngIf="coffee?.strength_level">Strength Level: {{ coffee?.strength_level }}</p>
+    <p *ngIf="coffee?.description">Description: {{ coffee?.description }}</p>
+    <p *ngIf="coffee?.contributed_by">Contributed by: {{ coffee?.contributed_by }}</p>
+  </div>
+  
