@@ -1,7 +1,7 @@
 export class Coffee{
     constructor(
         private _id: string,
-    private _image: string,
+    private _image_url: string,
     private _name: string,
     private _tagline: string,
     private _description: string,
@@ -20,12 +20,12 @@ export class Coffee{
         this._id = value;
     }
 
-    get image(): string {
-        return this._image;
+    get image_url(): string {
+        return this._image_url;
     }
 
-    set image(value: string) {
-        this._image = value;
+    set image_url(value: string) {
+        this._image_url = value;
     }
 
     get name(): string {
