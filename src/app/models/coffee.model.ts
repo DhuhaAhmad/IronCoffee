@@ -1,7 +1,7 @@
-export class Coffee{
-    constructor(
-        private _id: string,
+export class Coffee {
+  constructor(
     private _image_url: string,
+    private _id: string,
     private _name: string,
     private _tagline: string,
     private _description: string,
@@ -9,86 +9,86 @@ export class Coffee{
     private _roaster_tips: string,
     private _strength_level: number,
     private _contributed_by: string,
-    private _expireAt: string,
-    ){}
-    
-    get id(): string {
-        return this._id;
-    }
+    private _expireAt: string
+  ) {}
 
-    set id(value: string) {
-        this._id = value;
-    }
+  get id(): string {
+    return this._id;
+  }
 
-    get image_url(): string {
-        return this._image_url;
-    }
+  set id(value: string) {
+    this._id = value;
+  }
 
-    set image_url(value: string) {
-        this._image_url = value;
-    }
+  get image_url(): string {
+    return this._image_url;
+  }
 
-    get name(): string {
-        return this._name;
-    }
+  set image_url(value: string) {
+    this._image_url = value;
+  }
 
-    set name(value: string) {
-        this._name = value;
-    }
+  get name(): string {
+    return this._name;
+  }
 
-    get tagline(): string {
-        return this._tagline;
-    }
+  set name(value: string) {
+    this._name = value;
+  }
 
-    set tagline(value: string) {
-        this._tagline = value;
-    }
+  get tagline(): string {
+    return this._tagline;
+  }
 
-    get description(): string {
-        return this._description;
-    }
+  set tagline(value: string) {
+    this._tagline = value;
+  }
 
-    set description(value: string) {
-        this._description = value;
-    }
+  get description(): string {
+    return this._description;
+  }
 
-    get first_roasted(): string {
-        return this._first_roasted;
-    }
+  set description(value: string) {
+    this._description = value;
+  }
 
-    set first_roasted(value: string) {
-        this._first_roasted = value;
-    }
+  get first_roasted(): string {
+    return this._first_roasted;
+  }
 
-    get roaster_tips(): string {
-        return this._roaster_tips;
-    }
+  set first_roasted(value: string) {
+    this._first_roasted = value;
+  }
 
-    set roaster_tips(value: string) {
-        this._roaster_tips = value;
-    }
+  get roaster_tips(): string {
+    return this._roaster_tips;
+  }
 
-    get strength_level(): number {
-        return this._strength_level;
-    }
+  set roaster_tips(value: string) {
+    this._roaster_tips = value;
+  }
 
-    set strength_level(value: number) {
-        this._strength_level = value;
-    }
+  get strength_level(): number {
+    return this._strength_level;
+  }
 
-    get contributed_by(): string {
-        return this._contributed_by;
-    }
+  set strength_level(value: number) {
+    this._strength_level = value;
+  }
 
-    set contributed_by(value: string) {
-        this._contributed_by = value;
-    }
+  get contributed_by(): string {
+    return this._contributed_by;
+  }
 
-    get expireAt(): string {
-        return this._expireAt;
-    }
+  set contributed_by(value: string) {
+    this._contributed_by = value;
+  }
 
-    set expireAt(value: string) {
-        this._expireAt = value;
-    }
+  get expireAt(): string {
+    return this._expireAt;
+  }
+
+  set expireAt(value: string) {
+    this._expireAt = value;
+  }
 }
