@@ -1,3 +1,45 @@
 <app-menu></app-menu>
+<div class="container">
+  <div class="form-container"> 
+    <form>
+      <h2>Create a New Coffee</h2>
 
-<p>new-coffee works!</p>
+      <div class="mb-3">
+        <label for="name" class="form-label">Name:</label>
+        <input type="text" class="form-control" id="name" name="name" [(ngModel)]="name">
+      </div>
+
+      <div class="mb-3">
+        <label for="tagline" class="form-label">Tagline:</label>
+        <input type="text" class="form-control" id="tagline" name="tagline" [(ngModel)]="tagline">
+      </div>
+
+      <div class="mb-4">
+        <label for="description" class="form-label">Description:</label>
+        <textarea type="text" class="form-control" id="description" name="description" aria-describedby="description" rows="2" [(ngModel)]="description"></textarea>
+      </div>
+  
+      <div class="mb-3">
+        <label for="first_roasted" class="form-label">First Roasted:</label>
+        <input type="text" class="form-control" id="first_roasted" name="first_roasted" [(ngModel)]="first_roasted">
+      </div>
+
+      <div class="mb-3">
+        <label for="roaster_tips" class="form-label">Roaster Tips:</label>
+        <input type="text" class="form-control" id="roaster_tips" name="roaster_tips" [(ngModel)]="roaster_tips">
+      </div>
+  
+      <div class="mb-3">
+        <label for="strength_level" class="form-label">Strength Level:</label>
+        <input type="number" class="form-control" id="strength_level" name="strength_level" [(ngModel)]="strength_level">
+      </div>
+
+      <div class="mb-3">
+        <label for="contributed_by" class="form-label">Contributed By:</label>
+        <input type="text" class="form-control" id="contributed_by" name="contributed_by" [(ngModel)]="contributed_by">
+      </div>
+
+      <button (click)="postCoffee()" class="btn">Submit</button>
+    </form>
+  </div>
+</div>
