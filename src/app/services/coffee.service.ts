@@ -11,11 +11,15 @@ export class CoffeeService {
 
   constructor(private http: HttpClient) { }
 
-  getAllCoffees(): Observable<any>{
+  getAllCoffees(): Observable<any> {
     return this.http.get<any>(this.API_URL);
   }
 
-  fetchRandomCoffee():Observable<any>{
+  getCoffeeById(id: String): Observable<any> {
+    return this.http.get<any>(`${this.API_URL}/${id}`);
+  }
+
+  fetchRandomCoffee(): Observable<any> {
     return this.http.get<any>(`${this.API_URL}/random`)
   }
 

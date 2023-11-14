@@ -19,28 +19,32 @@ export class CoffeesComponent implements OnInit {
   p: number = 1; // Current page
   itemsPerPage: number = 3; // Items per page
 
-  constructor(private coffeeService: CoffeeService){
+  constructor(private coffeeService: CoffeeService) {
     this.searchInput$
-    .pipe(
-      debounceTime(300),
-      distinctUntilChanged(),
-      switchMap((query: string) => this.coffeeService.searchCoffees(query))
-    )
-    .subscribe((result) => {
-      this.coffees=result;
-    });
+      .pipe(
+        debounceTime(300),
+        distinctUntilChanged(),
+        switchMap((query: string) => this.coffeeService.searchCoffees(query))
+      )
+      .subscribe((result) => {
+        this.coffees = result;
+      });
   }
 
   ngOnInit(): void {
     this.getCoffees();
   }
 
-  getCoffees(): void{
+  getCoffees(): void {
     this.coffeeService.getAllCoffees().subscribe({
       next: (data) => {
         console.log(data);
         this.coffees = data;
         console.log(this.coffees);
+
+        for (let i in this.coffees) {
+          this.coffees[i].id = data[i]._id;
+        }
       },
       error: (error) => {
         console.log(error);
@@ -48,5 +52,5 @@ export class CoffeesComponent implements OnInit {
     });
   }
 
-  onPageChange(pageNumber: number): void {this.p = pageNumber; }
+  onPageChange(pageNumber: number): void { this.p = pageNumber; }
 }

@@ -3,10 +3,10 @@
 
 <div class="coffees" >
 
-    <a [routerLink]="['/single-coffee']" class="card-link" *ngFor="let coffee of coffees | paginate: { itemsPerPage: itemsPerPage, currentPage: p}">
+    <a [routerLink]="['/single-coffee',coffee.id]" class="card-link" *ngFor="let coffee of coffees | paginate: { itemsPerPage: itemsPerPage, currentPage: p}">
     <div class="card custom-card" >
 
-        <img [src]="coffee.image_url" class="card-img-top">
+        <img [src]="coffee.image_url" class="card-img-top" alt="">
         <div class="card-body">
             <h3 class="card-title">{{ coffee.name }}</h3>
             <p class="card-text">{{coffee.tagline}}</p>

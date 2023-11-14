@@ -8,16 +8,18 @@
     </div>
     <div class="col coffee-info">
       <div class="card-body">
-        <h2 *ngIf="coffee?.name" >{{ coffee?.name }}</h2>
-        <p *ngIf="coffee?.tagline" >{{ coffee?.tagline }}</p>
+        <h2 *ngIf="coffee?.name">{{ coffee?.name }}</h2>
+        <p *ngIf="coffee?.tagline">{{ coffee?.tagline }}</p>
         <hr>
-        <p *ngIf="coffee?.first_roasted" class="card-text"><strong>Roasted:</strong>  {{ coffee?.first_roasted }}</p>
-        <p *ngIf="coffee?.strength_level" class="card-text"><strong>Strength Level:</strong> {{ coffee?.strength_level }}</p>
+        <p *ngIf="coffee?.first_roasted" class="card-text"><strong>Roasted:</strong> {{ coffee?.first_roasted }}</p>
+        <p *ngIf="coffee?.strength_level" class="card-text"><strong>Strength Level:</strong> {{ coffee?.strength_level
+          }}</p>
         <p *ngIf="coffee?.description" class="card-text"><strong>Description:</strong> {{ coffee?.description }}</p>
-        <p *ngIf="coffee?.contributed_by" class="card-text"><strong>Contributed by: </strong>{{ coffee?.contributed_by }}</p>
+        <p *ngIf="coffee?.contributed_by" class="card-text"><strong>Contributed by: </strong>{{ coffee?.contributed_by
+          }}</p>
       </div>
-     
+
     </div>
   </div>
-  
+
 </div>

@@ -14,6 +14,7 @@ const routes: Routes = [
   { path: 'random-coffee', component: RandomCoffeeComponent },
   { path: 'new-coffee', component: NewCoffeeComponent },
   { path: 'single-coffee', component: SingleCoffeeComponent },
+  { path: 'single-coffee/:id', component: SingleCoffeeComponent },
 
 ];
 
@@ -21,4 +22,4 @@ const routes: Routes = [
   imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule],
 })
-export class AppRoutingModule {}
+export class AppRoutingModule { }
