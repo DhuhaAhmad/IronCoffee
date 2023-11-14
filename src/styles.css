@@ -1,10 +1,30 @@
 /* You can add global styles to this file, and also import other style files */
 @import url(https://unpkg.com/bootstrap@4.6.0/dist/css/bootstrap.min.css);
-.container{
-    margin: 15px 0px;
-}
+@import url(https://fonts.googleapis.com/css?family=Luckiest+Guy);
 .card-img-top{
     width: 50%;
     border-radius: 12px;
 }
+
+:root{
+  overflow-x: hidden;
+}
+/* WebKit Scrollbar */
+::-webkit-scrollbar {
+    width: 8px;
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    background-color: #dfa87894;
+    border-radius: 6px;
+  }
+  
+  ::-webkit-scrollbar-thumb:hover {
+    background-color: #dfa878d8;
+  }
+  
+  ::-webkit-scrollbar-track {
+    background-color: #f1f1f1;
+  }
+  
 
