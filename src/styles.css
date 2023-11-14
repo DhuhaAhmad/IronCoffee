@@ -1,6 +1,11 @@
 /* You can add global styles to this file, and also import other style files */
 @import url(https://unpkg.com/bootstrap@4.6.0/dist/css/bootstrap.min.css);
 @import url(https://fonts.googleapis.com/css?family=Luckiest+Guy);
+body{
+  position: relative;
+
+}
+
 .card-img-top{
     width: 50%;
     border-radius: 12px;

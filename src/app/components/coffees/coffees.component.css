@@ -57,5 +57,48 @@ transition: 0.3s ease-in-out;
 .CoffeeSearch{
   position: absolute;
   right: 0;
-  top: 4;
+  top: 0;
+  margin: 30px 30px 0 0;
+  width: 300px;
+  height: 50px;
+
+
+  background: #fff;
+  color:#111;
+  font: inherit;
+  
+  border: solid #DFA878;
+border-radius: 10px;
+  outline: 0;
+  padding: 22px 18px;
+
 }
+.CoffeeSearch:focus{
+
+  /* border: #DFA878 solid; */
+  border: rgba(223, 168, 120, 0.5) solid; /* Specify the border color with alpha value */
+  transition: border 0.3s ease-in-out; /* Add a transition for a smooth effect */
+
+  /* transition: 0.3s ease-in-out; */
+  /* animation: twinkle 3s ease-in-out infinite; Name, duration, iteration count */
+
+}
+.CoffeeSearch::placeholder{
+
+color: #929292;
+
+
+}
+
+/* @keyframes twinkle {
+  0% {
+  opacity: 0.5;
+  }
+  50% {
+ opacity: 0.8;
+  }
+  100% {
+   opacity: 1;
+  }
+} */
+  

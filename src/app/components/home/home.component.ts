@@ -7,4 +7,13 @@ import { Component } from '@angular/core';
 })
 export class HomeComponent {
 
+
+  scrollToTarget() {
+    const targetElement = document.getElementById('cards');
+
+    if (targetElement) {
+      // Smooth scroll to the target section
+      targetElement.scrollIntoView({ behavior: 'smooth' });
+    }
+  }
 }
