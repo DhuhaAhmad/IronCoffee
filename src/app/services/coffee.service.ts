@@ -22,4 +22,8 @@ export class CoffeeService {
   postCoffee(body: any): Observable<any> {
     return this.http.post<any>(`${this.API_URL}/new`, body);
   }
+  searchCoffees(query: string): Observable<any> {
+    const apiUrl = `https://ih-coffees-api-42e1df06199a.herokuapp.com/coffees/search?q=${query}`;
+    return this.http.get(apiUrl);
+  }
 }

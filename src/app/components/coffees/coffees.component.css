@@ -54,3 +54,8 @@ transition: 0.3s ease-in-out;
 .pagination{
     margin: 40px 0 20px; 
 }
+.CoffeeSearch{
+  position: absolute;
+  right: 0;
+  top: 4;
+}

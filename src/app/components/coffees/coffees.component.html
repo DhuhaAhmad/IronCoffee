@@ -1,8 +1,11 @@
 <app-menu></app-menu>
+<input class="CoffeeSearch" type="text" [(ngModel)]="searchQuery" (input)="searchInput$.next(searchQuery)" placeholder="Search for coffees" />
 
 <div class="coffees" >
+
     <a [routerLink]="['/single-coffee']" class="card-link" *ngFor="let coffee of coffees | paginate: { itemsPerPage: itemsPerPage, currentPage: p}">
     <div class="card custom-card" >
+
         <img [src]="coffee.image_url" class="card-img-top">
         <div class="card-body">
             <h3 class="card-title">{{ coffee.name }}</h3>

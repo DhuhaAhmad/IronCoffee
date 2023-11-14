@@ -2,6 +2,9 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Coffee } from 'src/app/models/coffee.model';
 import { CoffeeService } from 'src/app/services/coffee.service';
+import { debounceTime, distinctUntilChanged, switchMap } from 'rxjs/operators';
+import { Subject } from 'rxjs';
+
 
 @Component({
   selector: 'app-coffees',
@@ -10,11 +13,23 @@ import { CoffeeService } from 'src/app/services/coffee.service';
 })
 export class CoffeesComponent implements OnInit {
 
+  searchInput$ = new Subject<string>();
+  searchQuery: string = '';
   coffees: Coffee[] = [];
   p: number = 1; // Current page
   itemsPerPage: number = 3; // Items per page
 
-  constructor(private coffeeService: CoffeeService){}
+  constructor(private coffeeService: CoffeeService){
+    this.searchInput$
+    .pipe(
+      debounceTime(300),
+      distinctUntilChanged(),
+      switchMap((query: string) => this.coffeeService.searchCoffees(query))
+    )
+    .subscribe((result) => {
+      this.coffees=result;
+    });
+  }
 
   ngOnInit(): void {
     this.getCoffees();
