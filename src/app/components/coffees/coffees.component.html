@@ -1,15 +1,18 @@
 <app-menu></app-menu>
-<!-- <p>coffees works!</p> -->
-<div class="container" *ngFor="let coffee of coffees | paginate: { itemsPerPage: itemsPerPage, currentPage: p}">
-    <a [routerLink]="['/single-coffee']" class="card-link">
-    <div class="card custom-card">
+
+<div class="coffees" >
+    <a [routerLink]="['/single-coffee']" class="card-link" *ngFor="let coffee of coffees | paginate: { itemsPerPage: itemsPerPage, currentPage: p}">
+    <div class="card custom-card" >
         <img [src]="coffee.image_url" class="card-img-top">
         <div class="card-body">
             <h3 class="card-title">{{ coffee.name }}</h3>
             <p class="card-text">{{coffee.tagline}}</p>
-            <p class="card-text">Created By: {{coffee.contributed_by}}</p>
+            <p class="card-text"><strong>Created By:</strong>  {{coffee.contributed_by}}</p>
         </div>
     </div>
 </a>
+<div class="pagination-container">
+    <pagination-controls class="pagination" (pageChange)="p = $event"></pagination-controls>
+  </div>
+  
 </div>
-<pagination-controls (pageChange)="p = $event"></pagination-controls>

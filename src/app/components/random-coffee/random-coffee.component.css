@@ -1,0 +1,39 @@
+.coffee-container{
+    /* border: solid; */
+    background-color: #DFA878;
+    opacity: 0.8;
+    border-radius: 20px;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 50px;
+    margin: 30px 0;
+}
+.coffee-container img{
+    /* border: solid; */
+    margin: 50px 0;
+    width: 400px;
+    height: 650px;
+    object-fit: cover;
+    border-radius: 20px;
+    box-shadow: rgba(0, 0, 0, 0.09) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+    
+}
+
+.coffee-info .card-text{
+    text-align: left;
+    font-weight: 500;
+
+}
+.coffee-info h2{
+font-family: "Luckiest Guy";
+margin: 60px;
+
+}
+.coffee-info hr{
+margin:140px 0 80px;
+}
+
+hr{
+
+border: 1px solid;
+
+}
+
