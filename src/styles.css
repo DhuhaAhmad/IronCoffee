@@ -3,7 +3,7 @@
 @import url(https://fonts.googleapis.com/css?family=Luckiest+Guy);
 body{
   position: relative;
-
+  background: #CEE6F3;
 }
 
 .card-img-top{
@@ -14,7 +14,7 @@ body{
 :root{
   overflow-x: hidden;
 }
-/* WebKit Scrollbar */
+
 ::-webkit-scrollbar {
     width: 8px;
   }

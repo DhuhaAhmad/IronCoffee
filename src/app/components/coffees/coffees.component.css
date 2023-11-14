@@ -9,8 +9,8 @@
 }
 
 .card-link{
-       flex-basis: calc(28% - 10px); /* Adjust the width of each card */
-    margin: 10px; /* Add margin between cards */
+       flex-basis: calc(28% - 10px); 
+    margin: 10px; 
 }
 .custom-card{
   padding: 20px;
@@ -42,18 +42,19 @@ transition: 0.3s ease-in-out;
 
 }
 
-
 .pagination-container {
     display: grid;
     place-items: center;
+    position: fixed;
+    bottom: 0;
+    margin-bottom: 1%;
   }
   
-
-  
-
 .pagination{
     margin: 40px 0 20px; 
+    color: #6C3428;
 }
+
 .CoffeeSearch{
   position: absolute;
   right: 0;
@@ -67,7 +68,7 @@ transition: 0.3s ease-in-out;
   color:#111;
   font: inherit;
   
-  border: solid #DFA878;
+  border: solid #6C3428;
 border-radius: 10px;
   outline: 0;
   padding: 22px 18px;
@@ -75,12 +76,8 @@ border-radius: 10px;
 }
 .CoffeeSearch:focus{
 
-  /* border: #DFA878 solid; */
-  border: rgba(223, 168, 120, 0.5) solid; /* Specify the border color with alpha value */
-  transition: border 0.3s ease-in-out; /* Add a transition for a smooth effect */
-
-  /* transition: 0.3s ease-in-out; */
-  /* animation: twinkle 3s ease-in-out infinite; Name, duration, iteration count */
+  transition: 0.3s ease-in-out; 
+  animation: twinkle 3s ease-in-out infinite; 
 
 }
 .CoffeeSearch::placeholder{
@@ -90,7 +87,7 @@ color: #929292;
 
 }
 
-/* @keyframes twinkle {
+@keyframes twinkle {
   0% {
   opacity: 0.5;
   }
@@ -100,5 +97,5 @@ color: #929292;
   100% {
    opacity: 1;
   }
-} */
+}
   

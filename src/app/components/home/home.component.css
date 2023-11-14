@@ -30,6 +30,7 @@ line-height: normal;
 .card-container{
     display: flex;
     justify-content: space-evenly;
+    margin-bottom: 6%;
 }
 
 .card{
@@ -43,8 +44,6 @@ line-height: normal;
     transition: 0.3s ease-out;
 
 }
-
-
 
 img{
     width: 100px;

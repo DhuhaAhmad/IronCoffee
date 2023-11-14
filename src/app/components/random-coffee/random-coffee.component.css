@@ -1,5 +1,4 @@
 .coffee-container{
-    /* border: solid; */
     background-color: #DFA878;
     opacity: 0.8;
     border-radius: 20px;
@@ -7,7 +6,6 @@
     margin: 30px 0;
 }
 .coffee-container img{
-    /* border: solid; */
     margin: 50px 0;
     width: 400px;
     height: 650px;
